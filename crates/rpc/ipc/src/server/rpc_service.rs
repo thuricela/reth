@@ -81,7 +81,7 @@ impl RpcServiceT for RpcService {
                     if let Some(p) = cfg.bounded_subscriptions.acquire() {
                         let conn_state = SubscriptionState {
                             conn_id,
-                            id_provider: &*cfg.id_provider,
+                            id_provider: &cfg.id_provider,
                             subscription_permit: p,
                         };
 
